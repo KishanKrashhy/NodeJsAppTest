@@ -16,7 +16,7 @@ MongoClient.connect('mongodb://kishan:kishan@ds155091.mlab.com:55091/test-server
 
     if(err) return console.log(err)
     db = database
-    app.listen(8550,()=>{
+    app.listen(process.env.PORT||8550,()=>{
         console.log('the test server with the database');
     })
  
